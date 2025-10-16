@@ -6,6 +6,7 @@ import org.example.infra.Conexao;
 
 import java.net.URL;
 import java.sql.*;
+import java.time.LocalDateTime;
 
 public class OrdemManutencaoDao {
     public int criacaoOrdem (OrdemManutencao ordem){
@@ -17,8 +18,7 @@ public class OrdemManutencaoDao {
 
             stmt.setInt(1,ordem.getIdMaquina());
             stmt.setInt(2,ordem.getIdTecnico());
-            stmt.setDate(3, Date.valueOf(ordem.getDataSolicitacao()));
-            stmt.setString(4, ordem.getStatus());
+            stmt.setString(4, ordem.getStatus().name());
 
             int affectedRows = stmt.executeUpdate();
 

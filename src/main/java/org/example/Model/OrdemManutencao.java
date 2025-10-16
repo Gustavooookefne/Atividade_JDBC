@@ -9,8 +9,8 @@ public class OrdemManutencao {
     private int id;
     Maquina maquina ;
     Tecnico tecnico;
-    private LocalDateTime dataSolicitacao;
-    private StatusOrdemManutencao status;
+    LocalDateTime dataSolicitacao;
+    StatusOrdemManutencao status;
 
     public OrdemManutencao(int id, Maquina maquina, Tecnico tecnico, StatusOrdemManutencao status) {
         this.id = id;
@@ -52,7 +52,7 @@ public class OrdemManutencao {
         this.tecnico = tecnico;
     }
 
-    public String getDataSolicitacao() {
+    public LocalDateTime getDataSolicitacao() {
         return dataSolicitacao;
     }
 
@@ -60,7 +60,7 @@ public class OrdemManutencao {
         this.dataSolicitacao = dataSolicitacao;
     }
 
-    public String getStatus() {
+    public StatusOrdemManutencao getStatus() {
         return status;
     }
 
