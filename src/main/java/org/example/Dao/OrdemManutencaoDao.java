@@ -18,7 +18,7 @@ public class OrdemManutencaoDao {
 
             stmt.setInt(1,ordem.getIdMaquina());
             stmt.setInt(2,ordem.getIdTecnico());
-            stmt.setString(4, ordem.getStatus().name());
+            stmt.setString(3, ordem.getStatus().name());
 
             int affectedRows = stmt.executeUpdate();
 
