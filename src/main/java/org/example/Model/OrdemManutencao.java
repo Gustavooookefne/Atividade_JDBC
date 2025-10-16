@@ -52,7 +52,7 @@ public class OrdemManutencao {
         this.tecnico = tecnico;
     }
 
-    public LocalDateTime getDataSolicitacao() {
+    public String getDataSolicitacao() {
         return dataSolicitacao;
     }
 
@@ -60,11 +60,19 @@ public class OrdemManutencao {
         this.dataSolicitacao = dataSolicitacao;
     }
 
-    public StatusOrdemManutencao getStatus() {
+    public String getStatus() {
         return status;
     }
 
     public void setStatus(StatusOrdemManutencao status) {
         this.status = status;
+    }
+
+    public int getIdMaquina() {
+        return 0;
+    }
+
+    public int getIdTecnico() {
+        return 0;
     }
 }
