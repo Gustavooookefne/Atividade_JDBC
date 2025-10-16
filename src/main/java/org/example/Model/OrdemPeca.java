@@ -27,12 +27,12 @@ public class OrdemPeca {
         this.id = id;
     }
 
-    public int getIdOrdemPeca() {
+    public int getIdOrdem() {
         return idOrdem;
     }
 
-    public void setIdOrdemPeca(int idOrdemPeca) {
-        this.idOrdem = idOrdemPeca;
+    public void setIdOrdem(int idOrdem) {
+        this.idOrdem = idOrdem;
     }
 
     public int getIdPeca() {
