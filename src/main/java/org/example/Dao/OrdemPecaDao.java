@@ -5,24 +5,18 @@ import org.example.infra.Conexao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrdemPecaDao {
-    public static void gerarOrdem(OrdemPeca ordemPeca){
-        String slq = """
-                INSERT INTO OrdemPeca
-                (idOrdem , idPeca ,quantidade) VALUES (?,?,?)
-                """;
-        List<OrdemPeca> ordem = new ArrayList<>();
-        try (Connection conn = Conexao.getConnection();
-             PreparedStatement stmt  = conn.prepareStatement(slq)){
+public void inserir(OrdemPeca ordemPeca)throws SQLException{
+    String sql = """
+            INSERT INTO OrdemPEca (idOrdem ,idPeca ,quantidade) VALUES (?,?,?)
+            """;
 
-                stmt.setString(1,ordemPeca);
-
-
-    } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    try(Connection conn = Conexao.getConnection();
+    PreparedStatement stmt = conn.prepareStatement(sql)){
+        stmt.setInt(1,ordemPeca.or);
     }
+}

@@ -2,20 +2,20 @@ package org.example.Model;
 
 public class OrdemPeca {
     private int id;
-    OrdemPeca ordemPeca;
-    Peca peca;
+    private int idOrdem;
+    private int idPeca;
     private int quanidade;
 
-    public OrdemPeca(int id ,OrdemPeca ordemPeca ,Peca peca ,int quanidade){
+    public OrdemPeca(int id ,int idOrdem ,int idPeca ,int quantidade){
         this.id = id;
-        this.ordemPeca = ordemPeca;
-        this.peca = peca;
-        this.quanidade = quanidade;
+        this.idOrdem = idOrdem;
+        this.idPeca = idPeca;
+        this.quanidade = quantidade;
     }
 
-    public OrdemPeca(OrdemPeca ordemPeca ,Peca peca ,int quanidade){
-        this.ordemPeca = ordemPeca;
-        this.peca = peca;
+    public OrdemPeca(int idOrdem ,int idPeca ,int quanidade){
+        this.idOrdem = idOrdem;
+        this.idPeca = idPeca;
         this.quanidade = quanidade;
     }
 
@@ -27,20 +27,20 @@ public class OrdemPeca {
         this.id = id;
     }
 
-    public OrdemPeca getOrdemPeca() {
-        return ordemPeca;
+    public int getIdOrdemPeca() {
+        return idOrdem;
     }
 
-    public void setOrdemPeca(OrdemPeca ordemPeca) {
-        this.ordemPeca = ordemPeca;
+    public void setIdOrdemPeca(int idOrdemPeca) {
+        this.idOrdem = idOrdemPeca;
     }
 
-    public Peca getPeca() {
-        return peca;
+    public int getIdPeca() {
+        return idPeca;
     }
 
-    public void setPeca(Peca peca) {
-        this.peca = peca;
+    public void setIdPeca(int idPeca) {
+        this.idPeca = idPeca;
     }
 
     public int getQuanidade() {
