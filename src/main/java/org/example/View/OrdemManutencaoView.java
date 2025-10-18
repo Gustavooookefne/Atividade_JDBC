@@ -32,5 +32,23 @@ public class OrdemManutencaoView {
 
         int idTecnico = selecionarTecnico();
         if (idTecnico == -1) return;
+
+        try {
+            // 4. Data de solicitação = data atual
+            // 5. Status inicial = PENDENTE
+            OrdemManutencao novaOrdem = new OrdemManutencao(idMaquina, idTecnico);
+
+            // 6. Inserção no banco e 7. Atualizar status da máquina (Service)
+            int idOrdem = ordemService.criarOrdem(novaOrdem);
+
+            // 8. Confirmação
+            System.out.println("\n[SUCESSO] Ordem de Manutenção ID " + idOrdem + " criada e máquina atualizada!");
+
+        } catch (RegraNegocioException e) {
+            System.err.println("[ERRO DE REGRA] " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("[ERRO DE BANCO] Falha na criação da Ordem: " + e.getMessage());
+        }
+    }
     }
 }
