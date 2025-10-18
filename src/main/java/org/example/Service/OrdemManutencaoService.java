@@ -5,10 +5,10 @@ import org.example.Dao.OrdemManutencaoDao;
 import org.example.Model.OrdemManutencao;
 
 public class OrdemManutencaoService {
-    private final OrdemManutencaoDao ordemDao = new OrdemManutencaoDao();
-    private final MaquinaDAO maquinaDAO = new MaquinaDAO();
+    private OrdemManutencaoDao ordemDao = new OrdemManutencaoDao();
+    private MaquinaDAO maquinaDAO = new MaquinaDAO();
 
-    public void OrdemManutencao (OrdemManutencao ordemManutencao){
+    public OrdemManutencaoService(){
         this.ordemDao = new OrdemManutencaoDao();
         this.maquinaDAO = new MaquinaDAO();
 
