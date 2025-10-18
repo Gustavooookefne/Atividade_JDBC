@@ -25,7 +25,7 @@ public class OrdemManutencaoView {
     }
 
     public void CriarOrdemManutencao() {
-        System.out.println("----------- Criar Ordem Manuteção -----------");
+        System.out.println("---------- Criar Ordem Manuteção ----------");
 
     }
 }
