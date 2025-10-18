@@ -26,5 +26,11 @@ public class OrdemManutencaoView {
 
     public void CriarOrdemManutencao(){
         System.out.println("----------- Criar Ordem Manuteção -----------");
+
+        int idMaquina =
+        if (idMaquina == -1) return;
+
+        int idTecnico = selecionarTecnico();
+        if (idTecnico == -1) return;
     }
 }
