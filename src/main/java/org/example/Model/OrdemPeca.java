@@ -1,22 +1,28 @@
 package org.example.Model;
 
+import org.example.Enum.StatusOrdemManutencao;
+
 public class OrdemPeca {
     private int id;
     private int idOrdem;
     private int idPeca;
     private int quanidade;
+    StatusOrdemManutencao status;
 
-    public OrdemPeca(int id ,int idOrdem ,int idPeca ,int quantidade){
+    public OrdemPeca(int id , int idOrdem , int idPeca , int quantidade , StatusOrdemManutencao status){
         this.id = id;
         this.idOrdem = idOrdem;
         this.idPeca = idPeca;
         this.quanidade = quantidade;
     }
 
-    public OrdemPeca(int idOrdem ,int idPeca ,int quanidade){
+    public OrdemPeca(int idOrdem ,int idPeca ,int quanidade ,StatusOrdemManutencao status){
         this.idOrdem = idOrdem;
         this.idPeca = idPeca;
         this.quanidade = quanidade;
+    }
+
+    public OrdemPeca(int idOrdem, int idPeca, int quantidade, int status) {
     }
 
     public int getId() {
@@ -49,6 +55,14 @@ public class OrdemPeca {
 
     public void setQuanidade(int quanidade) {
         this.quanidade = quanidade;
+    }
+
+    public StatusOrdemManutencao getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusOrdemManutencao status) {
+        this.status = status;
     }
 
     public boolean getDetalhesConfirmacao() {

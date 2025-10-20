@@ -5,6 +5,7 @@ import org.example.Model.OrdemPeca;
 import org.example.Model.Peca;
 import org.example.Service.OrdemPecaService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class OrdemPecaView {
@@ -42,5 +43,10 @@ public class OrdemPecaView {
 
     private Peca selecionarPeca(){
         List<Peca> pecaList = pecaDao.buscarTodasPecas();
+
+        if(pecaList.isEmpty()){
+            System.out.println("A aordem Peças esta em Em_Andamento");
+        }
+        return null;
     }
 }

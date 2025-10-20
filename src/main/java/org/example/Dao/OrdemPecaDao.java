@@ -37,7 +37,8 @@ public class OrdemPecaDao {
                     pecasDaOrdem.add(new OrdemPeca(
                             rs.getInt("idOrdem"),
                             rs.getInt("idPeca"),
-                            rs.getInt("quantidade")
+                            rs.getInt("quantidade"),
+                            rs.getInt("Status")
                     ));
                 }
             }

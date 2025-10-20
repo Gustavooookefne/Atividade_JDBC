@@ -6,6 +6,7 @@ import org.example.Model.Peca;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class PecaDao {
     public static void inserirPeca(Peca peca) throws SQLException{
@@ -22,7 +23,9 @@ public class PecaDao {
         }
     }
 
-
+    public List<Peca> buscarTodasPecas(){
+        return List.of();
+    }
 
 
 }
