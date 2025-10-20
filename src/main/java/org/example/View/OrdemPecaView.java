@@ -4,6 +4,7 @@ import org.example.Dao.PecaDao;
 import org.example.Model.OrdemPeca;
 import org.example.Model.Peca;
 import org.example.Service.OrdemPecaService;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.List;
 import java.util.Scanner;
@@ -46,7 +47,38 @@ public class OrdemPecaView {
 
         if(pecaList.isEmpty()){
             System.out.println("A aordem Peças esta em Em_Andamento");
+            return null;
         }
-        return null;
+        System.out.println("\n ---- Peças Disponiveis -----");
+        for(Peca p : pecaList){
+            System.out.println("ID: "+ p.getId() + " - " + p.getNome());
+        }
+        System.out.println("-------------------------------");
+
+        Peca pecaSelecionada = null;
+        while (pecaSelecionada == null){
+            System.out.println("Digite o ID da Peça: ");
+            if(!sc.hasNextInt()){
+                System.out.println("ID invalido. Por favor, Digite um numero");
+                sc.nextLine();
+                continue;
+            }
+            int idPeca = sc.nextInt();
+            sc.nextLine();
+
+            for (Peca p : pecaList){
+                if(p.getId() == idPeca){
+                    pecaSelecionada = p;
+                    break;
+                }
+            }
+            if (pecaSelecionada == null){
+                System.out.println("ID " + idPeca + "Invalido. Tente novamente");
+            }
+        }
+        return pecaSelecionada;
+
     }
+
+
 }
