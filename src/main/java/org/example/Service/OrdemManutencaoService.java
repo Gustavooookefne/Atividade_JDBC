@@ -2,7 +2,9 @@ package org.example.Service;
 
 import org.example.Dao.MaquinaDAO;
 import org.example.Dao.OrdemManutencaoDao;
+import org.example.Model.Maquina;
 import org.example.Model.OrdemManutencao;
+import org.example.Model.Tecnico;
 
 public class OrdemManutencaoService {
     private OrdemManutencaoDao ordemDao = new OrdemManutencaoDao();
@@ -14,4 +16,7 @@ public class OrdemManutencaoService {
 
     }
 
+    public OrdemManutencao criarOrdem(Maquina maquinaSelecionada, Tecnico tecnicoSelecionado) {
+        return null;
+    }
 }

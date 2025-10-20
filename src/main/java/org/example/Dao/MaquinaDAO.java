@@ -6,6 +6,7 @@ import org.example.infra.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class MaquinaDAO {
     public static void inserirMaquina(Maquina maquina) throws SQLException {
@@ -25,10 +26,8 @@ public class MaquinaDAO {
     }
 
 
-
-
-
-
+    public List<Maquina> buscarTodasOperacionais() {
+    }
 }
 
 

@@ -75,4 +75,7 @@ public class OrdemManutencao {
     public int getIdTecnico() {
         return 0;
     }
+
+    public boolean getDetalhesConfirmacao() {
+    }
 }

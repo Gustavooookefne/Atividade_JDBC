@@ -6,6 +6,7 @@ import org.example.Model.Tecnico;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class TecnicoDao {
     public static void inserirTecnico (Tecnico tecnico) throws SQLException{
@@ -23,5 +24,8 @@ public class TecnicoDao {
             stmt.executeUpdate();
         }
 
+    }
+
+    public List<Tecnico> buscarTodos() {
     }
 }
