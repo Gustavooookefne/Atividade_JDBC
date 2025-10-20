@@ -25,7 +25,20 @@ public class OrdemManutencaoView {
     }
 
     public void CriarOrdemManutencao() {
-        System.out.println("---------- Criar Ordem Manuteção ----------");
+        try{
+            System.out.println("----------- Criar Ordem Manuteção -----------");
 
+            System.out.println("Coloque o id da maquina Solicitada: ");
+            int idMaquina = sc.nextInt();
+
+
+
+            System.out.println("Coloque o id Tecnico para fazer a manutenção da maquina: ");
+            int idTecnico = sc.nextInt();
+
+
+        }catch (Exception e){
+            System.out.println("Erro ao Criar ordem de manutenção!!");
+        }
     }
 }
