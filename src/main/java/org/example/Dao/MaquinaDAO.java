@@ -27,6 +27,7 @@ public class MaquinaDAO {
 
 
     public List<Maquina> buscarTodasOperacionais() {
+        return List.of();
     }
 }
 

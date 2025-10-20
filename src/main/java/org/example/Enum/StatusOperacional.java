@@ -8,7 +8,7 @@ public enum StatusOperacional {
     public enum StatusMaquina {
         PENDENTE,
         OPERACIONAL,
-        EM_MANUTENCAO;
+        EM_MANUTENCAO
     }
 
 }

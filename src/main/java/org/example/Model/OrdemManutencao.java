@@ -77,5 +77,6 @@ public class OrdemManutencao {
     }
 
     public boolean getDetalhesConfirmacao() {
+        return false;
     }
 }

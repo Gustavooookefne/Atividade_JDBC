@@ -27,5 +27,6 @@ public class TecnicoDao {
     }
 
     public List<Tecnico> buscarTodos() {
+        return List.of();
     }
 }
