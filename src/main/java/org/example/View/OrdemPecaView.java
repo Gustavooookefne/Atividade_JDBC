@@ -33,9 +33,14 @@ public class OrdemPecaView {
             System.out.println("\n ------------------------------------------");
             System.out.println("Ordem de Peça criada com sucesso!");
             System.out.println(novaOrdem.getDetalhesConfirmacao());
+            System.out.println("\n ------------------------------------------");
 
         }catch (Exception e){
             System.out.println("");
         }
+    }
+
+    private Peca selecionarPeca(){
+        List<Peca> pecaList = pecaDao.buscarTodasPecas();
     }
 }

@@ -50,4 +50,8 @@ public class OrdemPeca {
     public void setQuanidade(int quanidade) {
         this.quanidade = quanidade;
     }
+
+    public boolean getDetalhesConfirmacao() {
+        return false;
+    }
 }
